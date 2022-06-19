@@ -35,9 +35,7 @@
               "node_modules/ngx-toastr/toastr.css",
               "node_modules/bootstrap/scss/bootstrap.scss"
             ],
-            "scripts": [
-              "../node_modules/datatables.net/js/jquery.dataTables.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
