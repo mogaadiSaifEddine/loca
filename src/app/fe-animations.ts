@@ -26,7 +26,7 @@ export const pageFadeAnimation = trigger('pageFadeAnimation', [
       [
         style({ opacity: 1 }),
         animate(
-          '0.5s ease',
+          '0.7s ease',
           style({
             opacity: 0,
             width: 'calc(100vw - 40px)',
@@ -41,7 +41,7 @@ export const pageFadeAnimation = trigger('pageFadeAnimation', [
       [
         style({ opacity: 0 }),
         animate(
-          '0.5s ease',
+          '0.7s ease',
           style({
             opacity: 1,
             width: 'calc(100vw - 40px)',
