@@ -7,11 +7,21 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { UserService } from './services/user.service';
 import { UserCardComponent } from './uiComponents/user-card/user-card.component';
+// import slice pipe
+import { SlicePipe } from '@angular/common';
+import { DividerComponent } from './uiComponents/divider/divider.component';
+import { NewsComponent } from './pages/home/news/news.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, UserCardComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    UserCardComponent,
+    DividerComponent,
+    NewsComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [UserService, HttpClient],
+  providers: [UserService, HttpClient, SlicePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

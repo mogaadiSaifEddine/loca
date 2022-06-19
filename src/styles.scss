@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-
+$sidebar-width: 80px;
 //import bootstrap
 @import "~bootstrap/scss/bootstrap";
+// import bootstrap-icons
+@import "~bootstrap-icons/font/bootstrap-icons";
+
+body {
+  line-height: 1;
+}
+
+.custom-container {
+  padding: 0 2rem;
+}

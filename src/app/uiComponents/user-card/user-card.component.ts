@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { News } from 'src/app/models/New.model';
 import { User } from 'src/app/models/User.model';
 
 @Component({
@@ -8,8 +9,15 @@ import { User } from 'src/app/models/User.model';
 })
 export class UserCardComponent implements OnInit {
   @Input()
-  user!: User;
+  imgUrl!: string;
+  @Input()
+  status!: string;
+  @Input()
+  name!: string;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(typeof this.data);
+  }
 }

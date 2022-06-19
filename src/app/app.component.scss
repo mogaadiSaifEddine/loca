@@ -1,56 +1,87 @@
-body {
-    background-color: #fbfbfb;
-  }
-  @media (min-width: 991.98px) {
-    main {
-      padding-left: 240px;
-    }
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding: 58px 0 0; /* Height of navbar */
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-    width: 240px;
-    z-index: 600;
-  }
-  
-  @media (max-width: 991.98px) {
-    .sidebar {
-      width: 100%;
-    }
-  }
-  #router {
-    width: 100%;
+$sidebar-width: 80px;
+$navbar-height: 60px;
+$sidebar-bgColor: #354463;
+$card-user-height:190px;
+
+
+.header {
+  // add navbar position
+  position: sticky;
+}
+
+/* Sidebar */
+.sidebar {
+  width: $sidebar-width;
+  height: 100vh;
+  background: $sidebar-bgColor;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 3;
+
+  .nav {
     height: 100%;
-    background-color: #f5f5f5;
-    overflow: scroll;
-    overflow-x: hidden;
-    padding-right: 0px;
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+
+    .nav-item {
+      position: relative;
+
+      &:first-child {
+        margin: 1.2rem 0;
+      }
+
+      &:last-child {
+        margin-top: auto;
+        margin-bottom: 1.2rem;
+
+      }
+
+      padding: 0.2rem;
+
+      .bi {
+        font-size: 1.2rem;
+        color: white;
+      }
+    }
   }
-  .sidebar .active {
-    border-radius: 5px;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.btn-plain {
+  background-color: transparent;
+  border: none;
+}
+
+.nav-button {
+  width: 7rem;
+  margin-right: 1rem;
+}
+
+.sidebar .active {
+  border-radius: 5px;
+}
+
+.nav-button {
+  border-radius: 10px;
+  border: #f5f5f5;
+}
+
+#main-content {
+  padding-left: $sidebar-width;
+  width: 100%;
+  background-color: #F8F9FA;
+  height: 100vh;
+}
+
+.navbar-brand {
+  margin-left: 1rem;
+
+  img {
+    width: 125px;
   }
-  .nav-button{
-    border-radius: 10px;
-    border: #f5f5f5;
-  }
-  .sidebar-sticky {
-    position: relative;
-    top: 0;
-    height: calc(100vh - 48px);
-    padding-top: 0.5rem;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  }.content{
-    display: flex;
+
+}
+
+.main-body {
+  // display: flex;
+  pointer-events: all;
 }

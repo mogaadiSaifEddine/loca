@@ -1,6 +1,6 @@
 export interface User {
-  id?: number;
-  name?: string;
+  id?: number | string;
+  name: string;
   username?: string;
   email?: string;
   address?: Address;
@@ -8,6 +8,7 @@ export interface User {
   website?: string;
   company?: Company;
   img?: string;
+  status: string;
 }
 
 // interfacce aderss

@@ -1,9 +1,25 @@
-<div class="card p-2" style="width: 10rem">
-  <img
-    class="card-img-top"
+<div class="user-card mr-1" [ngClass]="{ 'news-card': !status }">
+  <!-- <img
     src="https://thumbs.dreamstime.com/b/aucune-photo-ou-ic%C3%B4ne-d-image-vide-chargement-images-marque-manquante-non-disponible-%C3%A0-venir-silhouette-nature-simple-dans-l-215973362.jpg"
-  />
+  /> -->
+
+  <div
+    class="img"
+    [ngStyle]="{
+      background: imgUrl
+        ? 'url(' + imgUrl + ')'
+        : 'https://thumbs.dreamstime.com/b/aucune-photo-ou-ic%C3%B4ne-d-image-vide-chargement-images-marque-manquante-non-disponible-%C3%A0-venir-silhouette-nature-simple-dans-l-215973362.jpg'
+    }"
+  ></div>
   <div class="card-body">
-    <p class="card-title">{{ user.name }}</p>
+    <p class="card-title">{{ name }}</p>
+  </div>
+  <div *ngIf="!!status">
+    <span
+      class="position-absolute badge bg-primary"
+      *ngIf="status === 'active'"
+    >
+      <i class="bi bi-check-lg"></i>
+    </span>
   </div>
 </div>
