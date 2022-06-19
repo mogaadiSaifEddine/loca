@@ -49,6 +49,42 @@ $min-width-button-add-user:200px;
   align-items: center;
 }
 
+.table {
+  margin-top: 5rem;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+
+  background-color: #f8f9fa button {
+
+    border-radius: 50%;
+    margin: .5rem;
+  }
+
+  .table-line {
+
+    td {
+      background-color: #ffffff;
+      border-collapse: collapse;
+
+    }
+  }
+}
+
+.configButton-container {
+  max-height: 2rem;
+}
+
+.configButton {
+  background-color: #f8f9fa;
+  border-radius: .5rem;
+  border: 1px solid #6c8fd6;
+  color:
+    #b2c0dd;
+  margin: 1rem .5rem;
+
+  height: max-content;
+}
+
 .card:hover {
   cursor: pointer;
 }
@@ -114,25 +150,28 @@ $min-width-button-add-user:200px;
   }
 }
 
+.search {
+  margin-left: auto;
 
+  button {
+    min-width: max-content;
+    background-color: #6a8ed3;
+  }
+}
+
+.nav-tabs {
+  color: #6a8ed3;
+}
 
 .second-section {
-  margin-top: 2rem;
-  border-top: 1px solid #e6e6e6;
   height: 400px;
   background-color: #F8F9FA;
 
-  #player {
-    height: 100%;
-    width: 700px;
-    border-left: 1px solid #e6e6e6;
-    padding: 1rem;
-  }
 
-  iframe {
-    height: 250px;
-    width: 420px;
-    border-radius: 1rem;
-    opacity: 0.5;
-  }
+}
+
+.form-control {
+  border-radius: .5rem;
+  border: 1px solid #6a8ed3;
+  margin-right: 1rem;
 }

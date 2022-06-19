@@ -18,12 +18,12 @@ import { DividerComponent } from './uiComponents/divider/divider.component';
 import { NewsComponent } from './pages/home/news/news.component';
 import { ShowUserComponent } from './pages/show-user/show-user.component';
 import { PrebuiltTemplateComponent } from './uiComponents/prebuilt-template/prebuilt-template.component';
-import { AddComponent } from './pages/home/add/add.component';
 import { AddUSerComponent } from './pages/home/add-user/add-user.component';
 import { FormBuilder } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderInterceptor } from './header.interceptor';
+import { ListUsersComponent } from './pages/home/list-users/list-users.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +33,8 @@ import { HeaderInterceptor } from './header.interceptor';
     NewsComponent,
     ShowUserComponent,
     PrebuiltTemplateComponent,
-    AddComponent,
     AddUSerComponent,
+    ListUsersComponent,
   ],
   imports: [
     ToastrModule.forRoot(),

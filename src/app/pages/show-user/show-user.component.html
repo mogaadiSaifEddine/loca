@@ -4,33 +4,35 @@
       <h4>Create your user</h4>
       <p>Are you ready to continue creating</p>
     </div>
-    <div class="d-flex flex-row">
-      <div class="recent-users">
-        <div class="d-flex flex-row">
-          <div id="s" (click)="goToaddUSerPage()" class="d-flex flex-column">
-            <div id="new-user-button" class="d-flex flex-column">
-              <i class="bi bi-plus-lg"></i>
-            </div>
-            <p>New user</p>
-          </div>
-          <div>
-            <div [ngStyle]="{ padding: '0 0 1rem 1rem' }">
-              <span [ngStyle]="{ 'font-weight': '100' }"
-                >Prebuilt Templtes</span
-              >
-            </div>
-            <div id="template-grid">
-              <app-prebuilt-template
-                *ngFor="let temp of preBuiltTemplates | slice: 0:3"
-                [preBuiltTemplate]="temp"
-                [showDesc]="false"
-              >
-              </app-prebuilt-template>
-            </div>
-          </div>
+
+    <div class="d-flex" id="template-flex">
+      <div id="s" (click)="goToaddUSerPage()">
+        <div
+          id="new-user-button"
+          class="d-flex flex-column align-items-center justify-content-center"
+        >
+          <i class="bi bi-plus-lg"></i>
+        </div>
+        <h4>New userhi theres</h4>
+      </div>
+
+      <div class="vertical-devider"></div>
+
+      <div>
+        <p [ngStyle]="{ 'font-weight': '100' }" class="mb-2">
+          Prebuilt Templtes
+        </p>
+        <div id="template-cards-grid">
+          <app-prebuilt-template
+            *ngFor="let temp of preBuiltTemplates | slice: 0:4"
+            [preBuiltTemplate]="temp"
+            [showDesc]="false"
+          >
+          </app-prebuilt-template>
         </div>
       </div>
     </div>
+
     <div class="second-section d-flex flex-column align-items-center">
       <div class="align-self-end">
         <button type="button" (click)="seeAll()" class="btn btn-secondary">

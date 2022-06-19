@@ -25,7 +25,7 @@ export class AppComponent {
       icon: 'bi-plus-circle',
     },
     {
-      path: '/projects',
+      path: '/users-list',
       icon: 'bi-stack',
     },
 

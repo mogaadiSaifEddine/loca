@@ -9,6 +9,7 @@ import { PreTemplate } from '../models/Template.model';
   providedIn: 'root',
 })
 export class UserService {
+  userToUpdate: User | undefined;
   templates: PreTemplate[] = [
     {
       id: 1,
@@ -57,5 +58,17 @@ export class UserService {
   // add new user
   addUser(user: User) {
     return this.http.post(environment.api, user);
+  }
+  //delete user
+  deleteUser(id: number) {
+    return this.http.delete(environment.api + '/' + id);
+  }
+  //get user by id
+  getUserById(id: number) {
+    return this.http.get<User>(environment.api + '/' + id);
+  }
+  //update user
+  updateUser(user: User) {
+    return this.http.patch(environment.api + '/' + user.id, user);
   }
 }

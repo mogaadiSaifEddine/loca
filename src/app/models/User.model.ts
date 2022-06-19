@@ -1,5 +1,5 @@
 export interface User {
-  id?: number | string;
+  id: number;
   name: string;
   username?: string;
   email?: string;
@@ -8,6 +8,7 @@ export interface User {
   website?: string;
   company?: Company;
   img?: string;
+  gender?: string;
   status: string;
 }
 

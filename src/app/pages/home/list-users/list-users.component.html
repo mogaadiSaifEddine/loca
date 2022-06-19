@@ -1,0 +1,74 @@
+<div class="custom-container">
+  <div class="d-flex flex-column">
+    <div class="first-section">
+      <h4>My User</h4>
+      <p>Be update of the app world</p>
+    </div>
+  </div>
+  <div class="second-section d-flex flex-row align-items-center">
+    <div class="news">
+      <div id="news-grid">
+        <ul class="nav nav-tabs">
+          <li class="nav-item" *ngFor="let tab of tabsElements">
+            <a
+              class="nav-link"
+              [ngClass]="{ active: tab.active, disabled: tab.disabled }"
+              [routerLink]="tab.link"
+              >{{ tab.title }}</a
+            >
+          </li>
+        </ul>
+        <nav class="navbar navbar-light bg-light search">
+          <form class="form-inline d-flex flex-row">
+            <input
+              class="form-control mr-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn search-button btn-primary ml-3" type="submit">
+              New Project
+              <i class="bi bi-plus-circle"></i>
+            </button>
+          </form>
+        </nav>
+      </div>
+      <div class="d-flex flex-row">
+        <table datatable class="table">
+          <thead>
+            <tr>
+              <th scope="col-2" *ngFor="let column of columns">
+                {{ column.name }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-line" *ngFor="let person of users">
+              <td scope="row">{{ person.name }}</td>
+              <td scope="row">{{ person.email }}</td>
+              <td scope="row">{{ person.status }}</td>
+              <td scope="row">{{ person.gender }}</td>
+              <td scope="row">
+                <button
+                  *ngFor="let action of actions"
+                  (click)="action.action(person)"
+                  class="{{ action.buttonClass }} table-button"
+                >
+                  <i class="bi {{ action.icon }}"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="d-flex flex-row configButton-container">
+          <button
+            *ngFor="let configButton of configButtons"
+            class="btn-primary configButton"
+          >
+            {{ configButton.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
