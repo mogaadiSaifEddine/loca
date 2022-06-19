@@ -11,6 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ListUsersComponent implements OnInit {
   columns = [
+    { name: 'checkbox' },
     { name: 'Name' },
     { name: 'Email' },
     { name: 'status' },

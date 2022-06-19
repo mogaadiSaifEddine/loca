@@ -45,6 +45,14 @@
           </thead>
           <tbody>
             <tr class="table-line" *ngFor="let person of shownUsers">
+              <td scope="row">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+              </td>
               <td scope="row">{{ person.name }}</td>
               <td scope="row">{{ person.email }}</td>
               <td scope="row">{{ person.status }}</td>
@@ -53,7 +61,7 @@
                 <button
                   *ngFor="let action of actions"
                   (click)="action.action(person)"
-                  class="{{ action.buttonClass }} table-button"
+                  class="{{ action.buttonClass }}  ml-2 "
                 >
                   <i class="bi {{ action.icon }}"></i>
                 </button>

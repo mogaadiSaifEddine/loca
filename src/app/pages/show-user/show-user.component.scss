@@ -105,23 +105,10 @@ $min-width-button-add-user:150px;
 .second-section {
   margin-top: 2rem;
   border-top: 1px solid #e6e6e6;
-  height: 400px;
+  height: auto;
   background-color: #F8F9FA;
 
-  #player {
-    height: 100%;
-    width: 700px;
-    border-left: 1px solid #e6e6e6;
-    padding: 1rem;
-  }
 
-  iframe {
-    height: 250px;
-    width: 420px;
-    border-radius: 1rem;
-    opacity: 0.5;
-    margin-left: 50px;
-  }
 }
 
 .btn {
