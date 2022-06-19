@@ -1,0 +1,206 @@
+$sidebar-width: 80px;
+$navbar-height: 60px;
+$sidebar-bgColor: #354463;
+$card-user-height:230px;
+$min-width-button-add-user:150px;
+
+.user-card {
+  width: 140px;
+  min-height: 150px;
+  position: relative;
+  padding: 0;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  .badge {
+    top: 5px;
+    right: 5px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img {
+    opacity: 0.2;
+    height: 100px;
+    background-image: url('https://thumbs.dreamstime.com/b/aucune-photo-ou-ic%C3%B4ne-d-image-vide-chargement-images-marque-manquante-non-disponible-%C3%A0-venir-silhouette-nature-simple-dans-l-215973362.jpg');
+    background-position: center;
+    background-size: 200px;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+  }
+
+  .card-title {
+    text-align: center;
+    font-size: .6rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card-body {
+    background-color: #fff;
+    border-radius: 0 0 .5rem .5rem;
+    border-top: 1px solid #e6e6e6;
+  }
+}
+
+.news-card {
+  width: 100%;
+  height: 250px;
+
+  .img {
+    height: 170px;
+    opacity: 1 !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+  }
+
+}
+
+.inline {
+  display: inline
+}
+
+.first-section {
+  h4 {
+    color: #656565;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+}
+
+.lower-section-title {
+  color: #656565;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.sub-title {
+  color: #656565;
+  font-size: 0.9em;
+}
+
+.bi-plus-lg {
+  margin: auto;
+  font-size: 2rem;
+}
+
+
+.card {
+  font-size: medium;
+  height: $card-user-height;
+  width: 200px;
+  margin-right: 10px;
+  color: black;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card div {
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+
+
+#k {
+  margin-left: 5rem
+}
+
+#new-user-button {
+  pointer-events: auto;
+  position: relative;
+  width: $min-width-button-add-user;
+  height: calc($card-user-height-30px);
+  min-width: $min-width-button-add-user;
+  stroke: none;
+  align-items: center;
+  border-radius: 8px;
+  padding-bottom: 1rem;
+
+  color: #6c8fd6;
+  box-shadow: 0px 0px 1px rgba(197, 178, 178, 0.1);
+  z-index: 2;
+
+  i {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0.6rem;
+  }
+
+  img {
+    color: #354463;
+  }
+}
+
+.recent-users {
+  width: 100%;
+  height: $card-user-height;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background: #ffffff;
+}
+
+.news {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem 1rem 0rem;
+
+  #news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    grid-gap: 1rem;
+
+
+  }
+}
+
+
+
+.second-section {
+  margin-top: 2rem;
+  border-top: 1px solid #e6e6e6;
+  height: 400px;
+  background-color: #F8F9FA;
+
+  #player {
+    height: 100%;
+    width: 700px;
+    border-left: 1px solid #e6e6e6;
+    padding: 1rem;
+  }
+
+  iframe {
+    height: 250px;
+    width: 420px;
+    border-radius: 1rem;
+    opacity: 0.5;
+    margin-left: 50px;
+  }
+}
+
+p {
+  margin-top: 1rem;
+}

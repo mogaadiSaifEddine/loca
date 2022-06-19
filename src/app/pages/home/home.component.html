@@ -1,21 +1,21 @@
 <div class="custom-container">
   <div class="d-flex flex-column">
     <div class="first-section mb-4">
-      <h4 (click)="goToaddUSerPage()">Home</h4>
+      <h4>Home</h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vel
         nihil fugiat. Aliquid
       </p>
     </div>
     <div class="d-flex flex-row">
-      <button
+      <div
         (click)="goToaddUSerPage()"
         id="new-user-button"
         class="d-flex flex-column"
       >
         <i class="bi bi-plus-lg"></i>
         <p>New user</p>
-      </button>
+      </div>
       <div class="recent-users">
         <p>Recent users</p>
 
@@ -27,6 +27,7 @@
             *ngFor="let user of usersList | slice: 0:6"
             [name]="user.name"
             [status]="user.status"
+            [from]="'recent-users'"
           >
           </app-user-card>
         </div>
@@ -44,6 +45,7 @@
             *ngFor="let neww of news | slice: 0:3"
             [name]="neww.title"
             [imgUrl]="neww.imageUrl"
+            [from]="'news'"
           >
           </app-user-card>
         </div>
@@ -60,6 +62,7 @@
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
+            style="border-radius: 1rem"
           ></iframe>
         </div>
       </div>

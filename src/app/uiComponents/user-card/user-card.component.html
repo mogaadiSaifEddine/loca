@@ -1,4 +1,7 @@
-<div class="user-card mr-1" [ngClass]="{ 'news-card': !status }">
+<div
+  class="user-card mr-1 mb-2"
+  [ngClass]="{ 'news-card': from == 'news', 'show-user': from == 'show-user' }"
+>
   <!-- <img
     src="https://thumbs.dreamstime.com/b/aucune-photo-ou-ic%C3%B4ne-d-image-vide-chargement-images-marque-manquante-non-disponible-%C3%A0-venir-silhouette-nature-simple-dans-l-215973362.jpg"
   /> -->

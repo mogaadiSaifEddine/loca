@@ -11,6 +11,10 @@ import { UserCardComponent } from './uiComponents/user-card/user-card.component'
 import { SlicePipe } from '@angular/common';
 import { DividerComponent } from './uiComponents/divider/divider.component';
 import { NewsComponent } from './pages/home/news/news.component';
+import { ShowUserComponent } from './pages/show-user/show-user.component';
+import { PrebuiltTemplateComponent } from './uiComponents/prebuilt-template/prebuilt-template.component';
+import { AddComponent } from './pages/home/add/add.component';
+import { AddUSerComponent } from './pages/home/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { NewsComponent } from './pages/home/news/news.component';
     UserCardComponent,
     DividerComponent,
     NewsComponent,
+    ShowUserComponent,
+    PrebuiltTemplateComponent,
+    AddComponent,
+    AddUSerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [UserService, HttpClient, SlicePipe],

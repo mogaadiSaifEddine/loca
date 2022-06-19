@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
     });
   }
   goToaddUSerPage() {
-    this.router.navigate(['/projects/add']);
+    this.router.navigate(['/show-user']);
     console.log('go to add user page');
   }
 }

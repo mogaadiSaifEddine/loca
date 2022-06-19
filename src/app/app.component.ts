@@ -18,7 +18,7 @@ export class AppComponent {
       icon: 'bi-house',
     },
     {
-      path: '/projects/add',
+      path: 'show-user',
       icon: 'bi-plus-circle',
     },
     {
