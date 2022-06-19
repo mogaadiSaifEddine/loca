@@ -1,6 +1,6 @@
 $sidebar-width: 80px;
 $navbar-height: 60px;
-$sidebar-bgColor: #6a8ed3;
+$sidebar-bgColor:#354463;
 $card-user-height:190px;
 
 
@@ -54,16 +54,16 @@ $card-user-height:190px;
 .nav-button {
   width: 7rem;
   margin-right: 1rem;
+  border-radius: 10px;
+  border: #f5f5f5;
+  padding: 0rem 1rem !important;
 }
 
 .sidebar .active {
   border-radius: 5px;
 }
 
-.nav-button {
-  border-radius: 10px;
-  border: #f5f5f5;
-}
+
 
 #main-content {
   padding-left: $sidebar-width;

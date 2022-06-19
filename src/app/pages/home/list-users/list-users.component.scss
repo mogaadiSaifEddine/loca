@@ -60,11 +60,26 @@ $min-width-button-add-user:200px;
     margin: .5rem;
   }
 
+  th {
+    font-weight: 400;
+  }
+
   .table-line {
 
     td {
       background-color: #ffffff;
       border-collapse: collapse;
+      vertical-align: middle;
+      padding: 1rem;
+
+      &:first-child {
+        border-radius: 0.5rem 0 0 0.5rem;
+      }
+
+      &:last-child {
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+
 
     }
   }
@@ -72,16 +87,19 @@ $min-width-button-add-user:200px;
 
 .configButton-container {
   max-height: 2rem;
+
 }
 
 .configButton {
   background-color: #f8f9fa;
   border-radius: .5rem;
-  border: 1px solid #6c8fd6;
+  border: 1px solid #35518b;
+  font-weight: 600;
   color:
-    #b2c0dd;
+    #787171;
   margin: 1rem .5rem;
-
+  font-size: .8rem;
+  padding: .3rem 1rem;
   height: max-content;
 }
 
@@ -154,8 +172,19 @@ $min-width-button-add-user:200px;
   margin-left: auto;
 
   button {
-    min-width: max-content;
+    min-width: 130px;
     background-color: #6a8ed3;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .3rem;
+    max-width: max-content;
+
+    span {
+
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -164,7 +193,7 @@ $min-width-button-add-user:200px;
 }
 
 .second-section {
-  height: 400px;
+  height: auto;
   background-color: #F8F9FA;
 
 

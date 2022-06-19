@@ -19,13 +19,11 @@ export class ShowUserComponent implements OnInit {
   constructor(private userService: UserService, private router: Router) {}
   sliceNumber = 6;
   ngOnInit(): void {
-    console.log(this.preBuiltTemplates);
     this.getAllUsers();
   }
   getAllUsers() {
     this.loading = true;
     this.userService.getUsers().subscribe((data) => {
-      console.log(data);
       this.loading = false;
       this.usersList = data;
     });
@@ -37,6 +35,5 @@ export class ShowUserComponent implements OnInit {
   }
   goToaddUSerPage() {
     this.router.navigate(['/add-user']);
-    console.log('go to add user page');
   }
 }

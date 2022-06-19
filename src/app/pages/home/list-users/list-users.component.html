@@ -21,13 +21,14 @@
         <nav class="navbar navbar-light bg-light search">
           <form class="form-inline d-flex flex-row">
             <input
+              (keyup)="search($event)"
               class="form-control mr-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
             <button class="btn search-button btn-primary ml-3" type="submit">
-              New Project
+              <span> New Project</span>
               <i class="bi bi-plus-circle"></i>
             </button>
           </form>
@@ -43,7 +44,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="table-line" *ngFor="let person of users">
+            <tr class="table-line" *ngFor="let person of shownUsers">
               <td scope="row">{{ person.name }}</td>
               <td scope="row">{{ person.email }}</td>
               <td scope="row">{{ person.status }}</td>

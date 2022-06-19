@@ -11,41 +11,16 @@ import { MenuItem } from './models/UI.model';
 })
 export class AppComponent {
   menuItems: MenuItem[] = [
-    {
-      path: '#',
-      icon: 'bi-list',
-    },
+    { name: '', path: '#', icon: 'bi-list' },
 
-    {
-      path: '/',
-      icon: 'bi-house',
-    },
-    {
-      path: 'show-user',
-      icon: 'bi-plus-circle',
-    },
-    {
-      path: '/users-list',
-      icon: 'bi-stack',
-    },
+    { name: 'Home', path: '/', icon: 'bi-house' },
+    { name: 'Add User', path: 'show-user', icon: 'bi-plus-circle' },
+    { name: 'Users', path: '/users-list', icon: 'bi-stack' },
 
-    {
-      path: '/',
-      icon: 'bi-phone',
-    },
-    {
-      path: '/',
-      icon: 'bi-controller',
-    },
-    {
-      path: '/',
-      icon: 'bi-headset',
-    },
-    {
-      path: '/',
-      icon: 'bi-question-octagon-fill',
-      isBordered: true,
-    },
+    { name: '', path: '/', icon: 'bi-phone' },
+    { name: '', path: '/', icon: 'bi-controller' },
+    { name: '', path: '/', icon: 'bi-headset' },
+    { name: '', path: '/', icon: 'bi-question-octagon-fill', isBordered: true },
   ];
   title = 'locatifytest';
 

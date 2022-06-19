@@ -12,7 +12,7 @@
         <form class="pl-2" [formGroup]="fg">
           <div class="name">
             <div class="form-group">
-              <label for="exampleInputEmail1">1. Enter User Name</label>
+              <label for="exampleInputName1">1. Enter User Name</label>
               <input
                 type="text"
                 formControlName="name"
@@ -49,9 +49,15 @@
 
         <div class="second-section d-flex flex-row align-items-center">
           <div class="news">
-            <p>News</p>
-            <p>Be update of the app world</p>
-            <div id="news-grid"></div>
+            <label>3. Select your project type</label>
+            <div id="news-grid" class="align-items-between">
+              <app-prebuilt-template
+                *ngFor="let temp of preBuiltTemplates"
+                [preBuiltTemplate]="temp"
+                [showDesc]="true"
+              >
+              </app-prebuilt-template>
+            </div>
           </div>
         </div>
         <div (click)="addUser()" id="save-button" class="btn btn-primary">

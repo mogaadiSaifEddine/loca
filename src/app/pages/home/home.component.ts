@@ -29,7 +29,6 @@ export class HomeComponent implements OnInit {
   getUsers() {
     this.loading = true;
     this.userService.getUsers().subscribe((data) => {
-      console.log(data);
       this.loading = false;
       this.usersList = data;
     });
@@ -37,13 +36,11 @@ export class HomeComponent implements OnInit {
   getNews() {
     this.loading = true;
     this.newsService.getNews().subscribe((data) => {
-      console.log(data.data);
       this.loading = false;
       this.news = data.data;
     });
   }
   goToaddUSerPage() {
     this.router.navigate(['/show-user']);
-    console.log('go to add user page');
   }
 }

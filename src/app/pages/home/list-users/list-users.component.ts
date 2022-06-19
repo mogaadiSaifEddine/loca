@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Subject } from 'rxjs';
 import { User } from 'src/app/models/User.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -80,7 +79,7 @@ export class ListUsersComponent implements OnInit {
   ];
 
   users: User[] = [];
-  dtTrigger: Subject<any> = new Subject<any>();
+  shownUsers: User[] = [];
 
   constructor(
     private userService: UserService,
@@ -94,6 +93,7 @@ export class ListUsersComponent implements OnInit {
   getAllUsers() {
     this.userService.getUsers().subscribe((users) => {
       this.users = users;
+      this.shownUsers = users;
     });
   }
   deleteUser(id: number) {
@@ -112,5 +112,14 @@ export class ListUsersComponent implements OnInit {
     this.userService.userToUpdate = user;
 
     this.router.navigate(['/add-user']);
+  }
+  search(text: any) {
+    this.shownUsers = this.users.filter(
+      (user) =>
+        user.name.includes(text.target.value) ||
+        user.email.includes(text.target.value) ||
+        user.status.includes(text.target.value) ||
+        user.gender?.includes(text.target.value)
+    );
   }
 }

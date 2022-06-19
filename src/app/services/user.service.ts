@@ -23,21 +23,21 @@ export class UserService {
       id: 2,
       name: 'Indoor Guide',
 
-      icon: 'https://img.icons8.com/ios/50/undefined/Indoor Guide.png',
+      icon: 'https://img.icons8.com/ios/50/undefined/earbud-headphones.png',
       description:
         'Create a Indoor Guide  with questions, answers, teams and score.',
     },
     {
       id: 3,
       name: 'Tour Guide',
-      icon: 'https://img.icons8.com/ios/50/undefined/tour-guide.png',
+      icon: 'https://img.icons8.com/external-simple-solid-edt.graphics/50/undefined/external-flag-flags-simple-solid-edt.graphics-2.png',
       description:
         'Create a tour guide game with questions, answers, teams and score.',
     },
     {
       id: 4,
       name: 'Indoor Game',
-      icon: 'https://img.icons8.com/ios/50/undefined/indoor-game.png',
+      icon: 'https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/undefined/external-domino-gambling-dreamstale-lineal-dreamstale-4.png',
       description:
         'Create a indoor game with questions, answers, teams and score.',
     },
@@ -45,7 +45,6 @@ export class UserService {
       id: 5,
       name: 'List',
       icon: 'https://img.icons8.com/ios/50/undefined/list.png',
-      description: 'Create a list with questions, answers, teams and score.',
     },
   ];
   constructor(private http: HttpClient) {}
