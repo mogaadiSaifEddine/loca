@@ -15,6 +15,30 @@ $min-width-button-add-user:200px;
 
 }
 
+.inside-card {
+  margin: 1rem
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+
+}
+
+
+.form-control {
+  border-radius: 0.5rem;
+  margin: 0.7rem;
+
+  //   max-width: max-content;
+  option {
+    font-size: 1.2rem;
+    height: max-content;
+    width: max-content;
+    margin-top: 1rem;
+  }
+}
+
 .first-section {
   h4 {
     color: #656565;
@@ -119,7 +143,6 @@ $min-width-button-add-user:200px;
 
 .second-section {
   margin-top: 2rem;
-  border-top: 1px solid #e6e6e6;
   height: 400px;
 
   #player {

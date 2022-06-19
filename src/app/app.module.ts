@@ -15,6 +15,9 @@ import { ShowUserComponent } from './pages/show-user/show-user.component';
 import { PrebuiltTemplateComponent } from './uiComponents/prebuilt-template/prebuilt-template.component';
 import { AddComponent } from './pages/home/add/add.component';
 import { AddUSerComponent } from './pages/home/add-user/add-user.component';
+import { FormBuilder } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,8 +31,15 @@ import { AddUSerComponent } from './pages/home/add-user/add-user.component';
     AddComponent,
     AddUSerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [UserService, HttpClient, SlicePipe],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+  ],
+  providers: [UserService, FormBuilder, HttpClient, SlicePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

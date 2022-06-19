@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { ChildrenOutletContexts } from '@angular/router';
+import { pageFadeAnimation } from './fe-animations';
 import { MenuItem } from './models/UI.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [pageFadeAnimation],
 })
 export class AppComponent {
   menuItems: MenuItem[] = [
@@ -45,4 +48,9 @@ export class AppComponent {
     },
   ];
   title = 'locatifytest';
+
+  constructor(private readonly contexts: ChildrenOutletContexts) {}
+  getRouteData() {
+    return this.contexts.getContext('primary')?.route?.data;
+  }
 }
