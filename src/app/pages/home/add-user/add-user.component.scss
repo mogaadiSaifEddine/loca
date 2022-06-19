@@ -169,13 +169,14 @@ $min-width-button-add-user:200px;
 }
 
 .news {
-  width: 100%;
+  width: 80%;
   height: 100%;
   padding: 1rem 2rem 1rem 0rem;
 
   #news-grid {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    grid-gap: 1rem;
   }
 }
 
