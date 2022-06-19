@@ -4,50 +4,25 @@ $sidebar-bgColor: #354463;
 $card-user-height:230px;
 $min-width-button-add-user:150px;
 
-.user-card {
+.card-container {
   width: 140px;
-  min-height: 150px;
-  position: relative;
-  padding: 0;
-  border: 1px solid #e6e6e6;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  margin-right: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  min-height: 180px;
 
-  .badge {
-    top: 5px;
-    right: 5px;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .card-img {
+    width: 140px;
+    height: 120px;
+    border-color: yellow;
+    border: 1px solid #e6e6e6;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 1px 1px;
   }
 
-  .img {
-    opacity: 0.2;
-    height: 100px;
-    background-image: url('https://thumbs.dreamstime.com/b/aucune-photo-ou-ic%C3%B4ne-d-image-vide-chargement-images-marque-manquante-non-disponible-%C3%A0-venir-silhouette-nature-simple-dans-l-215973362.jpg');
-    background-position: center;
-    background-size: 200px;
-    border-radius: 0.5rem 0.5rem 0 0;
-
-  }
-
-  .card-title {
-    text-align: center;
-    font-size: .6rem;
-    padding: 0;
-    margin: 0;
-  }
-
-  .card-body {
-    background-color: #fff;
-    border-radius: 0 0 .5rem .5rem;
-    border-top: 1px solid #e6e6e6;
+  .card-content {
+    h4 {
+      font-size: .8rem;
+      padding-top: .5rem;
+      color: #354463;
+    }
   }
 }
 
@@ -118,7 +93,6 @@ $min-width-button-add-user:150px;
   margin-bottom: 20px;
   margin-left: 5px;
 }
-
 
 
 #k {
@@ -203,4 +177,5 @@ $min-width-button-add-user:150px;
 
 p {
   margin-top: 1rem;
+  max-width: 140px;
 }

@@ -10,6 +10,9 @@ export class PrebuiltTemplateComponent implements OnInit {
   @Input()
   preBuiltTemplate!: PreTemplate;
 
+  @Input()
+  showDesc!: boolean;
+
   constructor() {}
 
   ngOnInit(): void {}

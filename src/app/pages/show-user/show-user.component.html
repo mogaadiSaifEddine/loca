@@ -7,18 +7,26 @@
     <div class="d-flex flex-row">
       <div class="recent-users">
         <div class="d-flex flex-row">
-          <div id="s" class="d-flex flex-column">
+          <div id="s" (click)="goToaddUSerPage()" class="d-flex flex-column">
             <div id="new-user-button" class="d-flex flex-column">
-              <i class="bi bi-plus-lg" (click)="goToaddUSerPage()"></i>
+              <i class="bi bi-plus-lg"></i>
             </div>
             <p>New user</p>
           </div>
-          <div id="k" class="d-flex flex-row">
-            <app-prebuilt-template
-              *ngFor="let temp of preBuiltTemplates | slice: 0:3"
-              [preBuiltTemplate]="temp"
-            >
-            </app-prebuilt-template>
+          <div>
+            <div [ngStyle]="{ padding: '0 0 1rem 1rem' }">
+              <span [ngStyle]="{ 'font-weight': '100' }"
+                >Prebuilt Templtes</span
+              >
+            </div>
+            <div id="template-grid">
+              <app-prebuilt-template
+                *ngFor="let temp of preBuiltTemplates | slice: 0:3"
+                [preBuiltTemplate]="temp"
+                [showDesc]="false"
+              >
+              </app-prebuilt-template>
+            </div>
           </div>
         </div>
       </div>

@@ -99,6 +99,12 @@ $min-width-button-add-user:200px;
   height: 100%;
   padding: 1rem 2rem 1rem 0rem;
 
+  #title {
+    color: #656565;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
   #news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
@@ -128,6 +134,5 @@ $min-width-button-add-user:200px;
     width: 420px;
     border-radius: 1rem;
     opacity: 0.5;
-    margin-left: 50px;
   }
 }

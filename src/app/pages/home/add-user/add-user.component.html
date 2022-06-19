@@ -10,18 +10,47 @@
     <div class="add-user-card">
       <div class="d-flex flex-column inside-card">
         <form class="pl-2" [formGroup]="fg">
+          <div class="name">
+            <div class="form-group">
+              <label for="exampleInputEmail1">1. Enter User Name</label>
+              <input
+                type="text"
+                formControlName="name"
+                class="form-control"
+                placeholder="Mohsen Al-Safadi"
+              />
+            </div>
+            <button id="import-button" class="btn">
+              <i class="bi bi-file-earmark-person"></i>Import
+            </button>
+          </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">1. Enter User Name</label>
+            <label for="exampleInputEmail1">1. Enter User Email</label>
             <input
               type="text"
-              formControlName="name"
+              formControlName="email"
               class="form-control"
-              placeholder="Mohsen Al-Safadi"
+              placeholder="Mohsen@gmail.com "
             />
           </div>
           <div class="form-group">
             <label for="exampleFormControlSelect1">2. Select Gender</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select
+              class="form-control"
+              formControlName="gender"
+              id="exampleFormControlSelect1"
+            >
+              <option *ngFor="let gender of genders" [value]="gender">
+                {{ gender }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">2. Select Gender</label>
+            <select
+              class="form-control d-flex flex-row"
+              id="exampleFormControlSelect2"
+            >
               <option *ngFor="let gender of genders" [value]="gender">
                 {{ gender }}
               </option>
@@ -35,6 +64,9 @@
             <p>Be update of the app world</p>
             <div id="news-grid"></div>
           </div>
+        </div>
+        <div (click)="addUser()" id="save-button" class="btn btn-primary">
+          Start
         </div>
       </div>
     </div>

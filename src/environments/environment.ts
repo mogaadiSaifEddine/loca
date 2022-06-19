@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   api: 'https://gorest.co.in/public/v2/users',
+  token: '10bcee46db8165b3de8d01b65a40591d5c2a6eea52e005ae9460fd66b93bd8ff',
 };
 
 /*

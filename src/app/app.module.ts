@@ -1,6 +1,11 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientModule,
+  HTTP_INTERCEPTORS,
+} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +23,7 @@ import { AddUSerComponent } from './pages/home/add-user/add-user.component';
 import { FormBuilder } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HeaderInterceptor } from './header.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AddUSerComponent,
   ],
   imports: [
+    ToastrModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -39,7 +45,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [UserService, FormBuilder, HttpClient, SlicePipe],
+  providers: [
+    UserService,
+    FormBuilder,
+    HttpClient,
+    SlicePipe,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HeaderInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

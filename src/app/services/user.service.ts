@@ -53,4 +53,9 @@ export class UserService {
   getUsers() {
     return this.http.get<User[]>(environment.api);
   }
+
+  // add new user
+  addUser(user: User) {
+    return this.http.post(environment.api, user);
+  }
 }

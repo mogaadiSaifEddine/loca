@@ -66,14 +66,19 @@ $min-width-button-add-user:150px;
   }
 }
 
-#k {
-  margin-left: 5rem
+#template-grid {
+  width: fit-content;
+  min-width: calc(140px *3);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-gap: .7rem;
+  padding-left: 1rem;
 }
 
 #new-user-button {
   pointer-events: auto;
   width: $min-width-button-add-user;
-  height: 150px;
+  height: 140px;
   min-width: $min-width-button-add-user;
   stroke: none;
   align-items: center;
